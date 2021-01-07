@@ -1,5 +1,5 @@
 import './styles.css';
-import { ReactComponent as ReactComponent} from "./linkedin.svg";
+import { ReactComponent} from "./linkedin.svg";
 
 function Footer(){
     return(
