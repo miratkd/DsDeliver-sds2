@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { toast, Toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { fetchProducts, saveOrder } from '../api';
 import Footer from '../Footer';
 import { checkIsSelected } from './Helpers';
