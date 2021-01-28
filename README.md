@@ -47,7 +47,9 @@
   
   [Linkedin](https://www.linkedin.com/in/lucas-mira-17514b203/)
   
- ////////
+ //////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ 
 # DsDeliver-sds2 (PT-BR)
  Projeto desenvolvido durante a segunda semana do evento Semana Dev-superior.
  
