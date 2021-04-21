@@ -10,9 +10,11 @@ import ProductsList from './ProductsList';
 import SteapsHeaders from './SteapsHeaders';
 import { OrderLocationData, Product } from './Types';
 import './styles.css';
+import Loader from './Loader';
 
 function Orders(){
 
+    const [isLoading, setIsLoading] = useState(false);
     const [products, setProducts] = useState<Product[]>([]);
     const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
     const [orderLocation, setOrderLocation] = useState<OrderLocationData>()
@@ -21,9 +23,11 @@ function Orders(){
     }, 0)
     useEffect(
         () => {
-            fetchProducts()
-            .then(response => setProducts(response.data))
-            .catch(error => console.log(error))
+          setIsLoading(true);
+          fetchProducts()
+          .then(response => setProducts(response.data))
+          .catch(error => console.log(error))
+          .finally(() => setIsLoading(false))
         },
     [])
 
@@ -58,11 +62,13 @@ function Orders(){
         <>
         <div className="orders-container">
             <SteapsHeaders/>
-            <ProductsList 
-            products={products}
-            onSelectProduct={handleSelectProduct}
-            selectedProducts={selectedProducts}
-            />
+            {isLoading ? <Loader/> : (
+              <ProductsList 
+              products={products}
+              onSelectProduct={handleSelectProduct}
+              selectedProducts={selectedProducts}
+              />
+            )}
             <OrderLocation 
             onChangeLocation={location => setOrderLocation(location)} 
             />
