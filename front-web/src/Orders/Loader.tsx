@@ -11,7 +11,7 @@ const Loader = () => {
             backgroundColor="#da5c5c"
             foregroundColor="#ecebeb"
         >
-            <rect x="270" y="0" rx="3" ry="3" width="500" height="10" />
+            <rect x="0" y="0" rx="3" ry="3" width="900" height="10" />
             
         </ContentLoader>
     )

@@ -23,3 +23,13 @@ type ProductId = {
 export type OrderPayload = {
     products: ProductId[];
 } & OrderLocationData;
+
+export type PendingOrder = {
+    id: number;
+    address: string;
+    latitude: number,
+    longitude: number,
+    moment: string,
+    status: string,
+    products: Product[]
+}

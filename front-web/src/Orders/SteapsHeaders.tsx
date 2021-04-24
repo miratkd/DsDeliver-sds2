@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 function SteapsHeaders(){
@@ -22,7 +23,9 @@ function SteapsHeaders(){
                     </li>
                 </ul>
             </div>
-            
+            <Link to="/admin" className="steps-button">
+                    Area<br/>admin
+            </Link>
         </header>
     )
 }

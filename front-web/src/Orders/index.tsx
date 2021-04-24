@@ -62,7 +62,9 @@ function Orders(){
         <>
         <div className="orders-container">
             <SteapsHeaders/>
-            {isLoading ? <Loader/> : (
+            {isLoading ? (
+              <div className="loader-containear"><Loader/></div>
+            ) : (
               <ProductsList 
               products={products}
               onSelectProduct={handleSelectProduct}

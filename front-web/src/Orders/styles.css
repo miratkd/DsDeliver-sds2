@@ -260,6 +260,18 @@
     background-color: #fcf2f2;
     transform: scale(1.01);
   }
+  .loader-containear{
+    margin-left: 300px;
+  }
+  .steps-button{
+    align-self: center;
+    background-color: #da5c5c;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
   
   @media only screen and (max-width: 768px) {
     .orders-steps-content {
