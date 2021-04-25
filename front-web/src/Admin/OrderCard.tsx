@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
 import { deliver } from '../api';
 import { PendingOrder } from '../Orders/Types';
@@ -10,9 +11,11 @@ type Props = {
 }
 
 const OrderCard = ({order}: Props) => {
+    const history = useHistory();
     const setDelivered = () => {
         deliver(order.id)
-        .then(() => toast.error("Produto entregue"))
+        .then(() => {toast.error("Produto entregue");
+                    history.push("/orders");})
         .catch(error => toast.warning(error))
 
     }
